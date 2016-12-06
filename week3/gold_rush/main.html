@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html ng-app= "gold"  lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>There's Gold in them Hills!</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.9/angular.js"></script>
+                 
+</head>
+    <h1>
+        Prospect for Gold!
+    </h1>
+<body ng-controller= "GoldRush as gCtrl" >
+<div>
+        <div class="goldStyle" ng-repeat="picture in gCtrl.markers track by $index" style="background: url({{gCtrl.markerImg}}); top: {{picture.y}}px; left: {{picture.x}}px" ng-click="gCtrl.removeMarker($index, $event)">
+        </div>
+            <img ng-click="gCtrl.addMarker()" 
+                src= "http://i.imgur.com/CHoz4in.jpg"> 
+                <p id="demo"></p> 
+            </img>
+        <div    ng-click="gCtrl.removeMarker($index)" style="background: url({{gCtrl.markerImg}}); top: {{removePic.y}}px; left: {{removePic.x}}px">
+        </div>
+    
+</div>
+        <!--           this was removed             gCtrl.coords($event)  -->
+
+<!--  Gold >>>  http://i.imgur.com/dKGlvhHt.png   -->
+            
+    
+    
+    
+    <script src="/main.js"></script>
+</body>
+    
+    
+    
+</html>

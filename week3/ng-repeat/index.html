@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html ng-app="JoeDirt">
+<head>
+   
+    <title>ng-repeat</title>
+    <script scr="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.9/angular.js"></script>
+    <script src="main.js"></script>
+</head>
+<body ng-controller="Brandy as brandy">
+    
+    <h2 ng-bind="brandy.greeting" </h2>
+        <ul>
+            Cast:
+           <li ng-repeat = "(castMember, castIndex) in brandy.characters">
+                {{castMember}} - {{castIndex}} - {{$index}}         
+            </li> 
+           
+    </ul>
+                 
+    
+</body>
+</html>
